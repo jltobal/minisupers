@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.header{
+    background-color: aqua;
+    width: 90%;
+    height: 20vh;
+}
