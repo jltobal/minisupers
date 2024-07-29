@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+}
+input, textarea{
+    width: 50vh;
+}
+button{
+    background-color: blueviolet;
+    width: 25vh;
+    height: 5vh;
+    border-radius: 5%;
+}
+.formulario{
+    background-color: antiquewhite;
+    padding: 4vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 50vh;
+}
