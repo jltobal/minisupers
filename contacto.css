@@ -15,8 +15,12 @@ button{
     height: 5vh;
     border-radius: 5%;
 }
+form{
+    justify-content: center;
+}
 .formulario{
     background-color: antiquewhite;
+    margin: 2vh;
     padding: 4vh;
     display: flex;
     flex-direction:column;
