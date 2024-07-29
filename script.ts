@@ -16,11 +16,13 @@ for (let i:number=0; i < productosArray.length; i++){
     const nombre = productosPorLinea[0];
     const precio = productosPorLinea[1];
     const stock = productosPorLinea[2];
+    const categoria = productosPorLinea[3]
 
     const producto={
         nombre: nombre,
         precio: precio,
-        stock: stock
+        stock: stock,
+        categoria: categoria
     }
 
     productosJSON.push(producto);
@@ -29,4 +31,6 @@ for (let i:number=0; i < productosArray.length; i++){
 const pepito=JSON.stringify(productosJSON, null, 2);
 
 console.log(pepito);
+
+/// 0 = infusiones, 1 = conservas/enlatados, 2 = bebidas, 3 = otros
 

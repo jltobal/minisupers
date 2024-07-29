@@ -1,4 +1,3 @@
-"use strict";
 
 fetch('./bbdd.txt')
     .then(response => {
@@ -20,10 +19,12 @@ fetch('./bbdd.txt')
             var nombre = productosPorLinea[0];
             var precio = productosPorLinea[1];
             var stock = productosPorLinea[2];
+            var categoria = productosPorLinea[3];
             var producto = {
                 nombre: nombre,
                 precio: precio,
-                stock: stock
+                stock: stock,
+                categoria: categoria
             };
             productosJSON.push(producto);
         }
