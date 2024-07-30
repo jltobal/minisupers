@@ -2,7 +2,9 @@
     margin: 0;
 }
 body{
-    background-color: aqua;
+    background-image: url(img/fondo_contacto.jpg);
+    background-size: 100%;
+    background-position: center;
     display: flex;
     justify-content: center;
 }
@@ -11,17 +13,22 @@ input, textarea{
     border-radius: 5px;
 }
 button{
-    background-color: blueviolet;
+    margin-top: 4vh;
+    background-color: green;
     border-radius: 15px;
     width: 25vh;
     height: 5vh;
     border-radius: 5%;
 }
 form{
+    opacity: 100%;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 .formulario{
     background-color: antiquewhite;
+    opacity: 90%;
     margin: 2vh;
     padding: 4vh;
     display: flex;
