@@ -8,9 +8,11 @@ body{
 }
 input, textarea{
     width: 50vh;
+    border-radius: 5px;
 }
 button{
     background-color: blueviolet;
+    border-radius: 15px;
     width: 25vh;
     height: 5vh;
     border-radius: 5%;
