@@ -9,28 +9,40 @@ body {
     justify-content: center;
 }
 
+header a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 header {
-    background-color: aqua;
     width: 100%;
-    height: 20vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    height: 40vh;
+    background-color: #f0f0f0;
+    background-image: url(img/prueba_banner.webp)
+}
+
+header img {
+    height: 20vh;
 }
 
 nav {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: center;
+    display: flex;
+    gap: 3vh;
 }
 
-header a {
-    margin: 2vh;
-    padding: 1vh;
-    background-color: green;
-    color: aliceblue;
-    border-radius: 5%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.btn_nav {
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.btn_nav:hover {
+    background-color: #ccc;
 }
 
 footer {
