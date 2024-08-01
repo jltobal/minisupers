@@ -1,0 +1,70 @@
+/*--HEADER--*/
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 38vh;
+    background-image: url(img/minisupers_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+/*--NAVBAR--*/
+
+nav {
+    display: flex;
+    gap: 5%
+}
+
+header a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn_nav {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: green;
+    border-radius: 5px;
+}
+
+.btn_nav:hover {
+    background-color: #ccc;
+}
+
+/*--FOOTER--*/
+
+footer {
+    background-color: brown;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 600px){
+    header {
+        width: 80%;
+        height: 22vh;
+    }
+    
+    nav {
+        display: flex;
+        gap: 1%
+    }
+    
+    .btn_nav {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background-color: green;
+        border-radius: 5px;
+    }
+    
+    .btn_nav:hover {
+        background-color: #ccc;
+    }
+}
