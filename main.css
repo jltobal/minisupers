@@ -6,6 +6,9 @@ body{
     flex-wrap: wrap;
     justify-content: center;
 }
+img{
+    width: 80vh;
+}
 .header{
     background-color: aqua;
     width: 90%;
