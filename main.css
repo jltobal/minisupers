@@ -17,7 +17,7 @@ footer{
     justify-content: center;
 }
 img{
-    width: 85vh;
+    width: 90%;
     margin: 3vh;
 }
 h6{
@@ -37,7 +37,7 @@ p{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     height: auto;
 }
 .contenido_home{
