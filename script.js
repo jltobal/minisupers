@@ -31,7 +31,34 @@ fetch('./bbdd.txt')
 
         var pepito = JSON.stringify(productosJSON, null, 2);
         console.log(pepito);
+
+//JOACO DESDE ACA CAPAZ ME LA MANDO
+        displayProducts(productosJSON);
+        //HASTA ACA
+
     })
     .catch(error => {
         console.error('Fetch error:', error);
     });
+
+    //Y DESDE ACA TAMBIEN
+function displayProducts(productosJSON) {
+    const container = document.getElementById('product-container');
+
+    productosJSON.forEach((producto, index) => {
+        if (index >= 24) return;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = `item col${index + 1}`;
+        itemDiv.innerHTML = `
+            <h4>${producto.nombre}</h4>
+            <form>
+                <label>Precio: $${producto.precio}</label><br>
+                <label>Stock: ${producto.stock}</label><br>
+                <label>Categoria: ${producto.categoria}</label><br>
+            </form>
+        `;
+        container.appendChild(itemDiv);
+    });
+}
+//HASTA ACA

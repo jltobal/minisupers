@@ -8,6 +8,7 @@ body{
     display: flex;
     justify-content: center;
 }
+
 input, textarea{
     width: 50vh;
     border-radius: 5px;

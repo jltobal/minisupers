@@ -32,4 +32,28 @@ const pepito=JSON.stringify(productosJSON, null, 2);
 
 console.log(pepito);
 
-/// 0 = infusiones, 1 = conservas/enlatados, 2 = bebidas, 3 = otros
+///categorias: 0 = infusiones, 1 = conservas/enlatados, 2 = bebidas, 3 = otros    NO OLVIDAR!
+
+// mostrador de productos en el muy bobnito HTML de compras
+
+function displayProducts(productosJSON: any[]) {
+    const container = document.getElementById('product-container');
+
+    productosJSON.forEach((producto, index) => {
+        if (index >= 24) return;
+
+        const itemDiv = document.createElement('div');
+        itemDiv.className = `item col${index + 1}`;
+        itemDiv.innerHTML = `
+            <h4>${producto.nombre}</h4>
+            <form>
+                <label>Precio: $${producto.precio}</label><br>
+                <label>Stock: ${producto.stock}</label><br>
+                <label>Categoria: ${producto.categoria}</label><br>
+            </form>
+        `;
+        container?.appendChild(itemDiv);
+    });
+}
+
+displayProducts(productosJSON);
