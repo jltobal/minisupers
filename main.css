@@ -1,46 +1,81 @@
-*{
+* {
     margin: 0;
 }
-body{
+
+body {
     background-color: darkcyan;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-header{
 
+header {
+    background-color: aqua;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-footer{
+
+nav {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+header a {
+    margin: 2vh;
+    padding: 1vh;
+    background-color: green;
+    color: aliceblue;
+    border-radius: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
     background-color: brown;
     width: 100%;
     display: flex;
     justify-content: center;
 }
-img{
+
+img {
     width: 90%;
     margin: 3vh;
 }
-h6{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     margin-bottom: 1vh;
 }
-span{
+
+span {
     margin: 0.5vh;
     font-size: 16px;
 }
-p{
+
+p {
     margin: 3vh;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif
 }
-.contenedor{
+
+.contenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;
+    width: 85%;
     height: auto;
 }
-.contenido_home{
+
+.imagen_oferta img {
+    width: 100%;
+    margin: 0;
+    margin-top: 2vh;
+}
+
+.contenido_home {
     background-color: aliceblue;
     border-radius: 2%;
     margin: 2vh;
@@ -48,9 +83,4 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.header{
-    background-color: aqua;
-    width: 90%;
-    height: 20vh;
 }
