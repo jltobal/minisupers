@@ -56,6 +56,7 @@ function displayProducts(productosJSON) {
                 <label>Precio: $${producto.precio}</label><br>
                 <label>Stock: ${producto.stock}</label><br>
                 <label>Categoria: ${producto.categoria}</label><br>
+                <input type="number" min="0" max="${producto.stock}" placeholder="0">
             </form>
         `;
         container.appendChild(itemDiv);
