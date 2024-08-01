@@ -33,4 +33,3 @@ const pepito=JSON.stringify(productosJSON, null, 2);
 console.log(pepito);
 
 /// 0 = infusiones, 1 = conservas/enlatados, 2 = bebidas, 3 = otros
-
