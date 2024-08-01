@@ -19,25 +19,24 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 40vh;
-    background-color: #f0f0f0;
-    background-image: url(img/prueba_banner.webp)
-}
-
-header img {
-    height: 20vh;
+    height: 38vh;
+    background-image: url(img/minisupers_2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
 }
 
 nav {
     display: flex;
-    gap: 3vh;
+    gap: 5%
 }
 
 .btn_nav {
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 10px 20px;
-    background-color: #ddd;
+    background-color: green;
     border-radius: 5px;
 }
 
@@ -95,4 +94,28 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media(max-width: 600px){
+    header {
+        width: 80%;
+        height: 22vh;
+    }
+    
+    nav {
+        display: flex;
+        gap: 1%
+    }
+    
+    .btn_nav {
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        background-color: green;
+        border-radius: 5px;
+    }
+    
+    .btn_nav:hover {
+        background-color: #ccc;
+    }
 }
