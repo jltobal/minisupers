@@ -1,6 +1,5 @@
 let productosJSON = [];
 
-
 //Se levanta el archivo bbdd.txt el cual funciona como "base de datos". Se transforma en un JSON para utilizar mas adelante.
 fetch("./bbdd.txt")
   .then((response) => {
@@ -61,6 +60,8 @@ function displayProducts(productosJSON) {
   });
 }
 
+let inputs = document.querySelectorAll('input[type="number"]');
+
 //Calcula el total de la compra
 //Lee los inputs, lo asocia con el producto que corresponde dentro de su div,
 //identifica el precio y, si corresponde, hace el descuento.
@@ -68,7 +69,7 @@ document
   .querySelector(".btn_comprar")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    let inputs = document.querySelectorAll('input[type="number"]');
+
     let total = 0;
 
     inputs.forEach((input) => {
@@ -91,3 +92,20 @@ document
     let div_precio = document.querySelector(".valor_total");
     div_precio.innerHTML = `El precio de su comrpa es $ ${total}`;
   });
+
+//Alerta que aparece cuando un input llega al maximo y se quiere seguir agregando valor al input
+inputs.forEach(input => {
+    input.addEventListener('input', handleInputChange);
+  });
+
+  function handleInputChange(event) {
+    const input = event.target;
+    const i = input.index;
+    const max = productosJSON[i].stock;
+    const value = parseInt(input.value) || 0;
+  
+    if (value > max) {
+      alert("Calocha");
+      input.value = max;
+    }
+  }
