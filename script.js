@@ -52,12 +52,12 @@ function displayProducts(productosJSON) {
         itemDiv.className = `item col${index + 1}`;
         itemDiv.innerHTML = `
             <h4>${producto.nombre}</h4>
-            <form>
+            <div>
                 <label>Precio: $${producto.precio}</label><br>
                 <label>Stock: ${producto.stock}</label><br>
                 <label>Categoria: ${producto.categoria}</label><br>
                 <input type="number" min="0" max="${producto.stock}" placeholder="0">
-            </form>
+            </div>
         `;
         container.appendChild(itemDiv);
     });

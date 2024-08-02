@@ -47,8 +47,8 @@ function displayProducts(productosJSON: any[]) {
         itemDiv.innerHTML = `
             <h4>${producto.nombre}</h4>
             <form>
-                <label>Precio: $${producto.precio}</label><br>
-                <label>Stock: ${producto.stock}</label><br>
+                <label>Precio: $ ${producto.precio}</label><br>
+                <label>Stock:${producto.stock}</label><br>
                 <label>Categoria: ${producto.categoria}</label><br>
             </form>
         `;
