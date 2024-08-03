@@ -9,7 +9,6 @@ fetch("./bbdd.txt")
     return response.text();
   })
   .then((datosProductos) => {
-
     var productosSinEspacios = datosProductos.trim();
     var productosArray = productosSinEspacios.split("|");
 
@@ -31,7 +30,7 @@ fetch("./bbdd.txt")
     }
 
     var pepito = JSON.stringify(productosJSON, null, 2);
-    console.log(pepito);//ACA IMPRIMO EL JASON EN LA CONSOLA
+    console.log(pepito); //ACA IMPRIMO EL JASON EN LA CONSOLA
 
     displayProducts(productosJSON);
 
@@ -76,7 +75,7 @@ document
       const index = parseInt(input.getAttribute("data-index"));
       const max_stock = parseInt(productosJSON[index].stock);
 
-      if(cantidad > max_stock){
+      if (cantidad > max_stock) {
         alert("No hay suficiente stock del producto");
         cantidad = 0;
       }
@@ -94,10 +93,26 @@ document
     console.log(total);
     let div_precio = document.querySelector(".valor_total");
     div_precio.innerHTML = `El precio de su comrpa es $ ${total}`;
-  });
 
-  //MEDIOS DE PAGO
-  document.querySelector("btn_continuar").addEventListener('click', function(event){
-    event.preventDefault
-    alert("Gracias por comprar en MINISUPERS");
-  })
+    document.querySelector(
+      ".medios_pago"
+    ).innerHTML = `<form action="" class="form_pagos">
+      <label for="">MEDIOS DE PAGO</label>
+      <select name="pago" id="">
+        <option value="debito">DEBITO</option>
+        <option value="credito">CREDITO</option>
+        <option value="echek">ECHEK</option>
+        <option value="transferencia">TRANSFERENCIA</option>
+      </select>
+      <button type="button" class="btn_continuar">IR A PAGAR</button>
+    </form>`;
+
+    //MEDIOS DE PAGO
+
+    document
+      .querySelector(".btn_continuar")
+      .addEventListener("click", function (event) {
+        event.preventDefault;
+        alert("Gracias por comprar en MINISUPERS");
+      });
+  });
