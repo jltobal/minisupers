@@ -1,6 +1,5 @@
 let productosJSON = [];
 
-
 //Se levanta el archivo bbdd.txt el cual funciona como "base de datos". Se transforma en un JSON para utilizar mas adelante.
 fetch("./bbdd.txt")
   .then((response) => {
@@ -10,11 +9,9 @@ fetch("./bbdd.txt")
     return response.text();
   })
   .then((datosProductos) => {
-    console.log(datosProductos);
 
     var productosSinEspacios = datosProductos.trim();
     var productosArray = productosSinEspacios.split("|");
-    console.log(productosArray);
 
     for (var i = 0; i < productosArray.length; i++) {
       var productosPorLinea = productosArray[i].split(",");
@@ -32,7 +29,7 @@ fetch("./bbdd.txt")
     }
 
     var pepito = JSON.stringify(productosJSON, null, 2);
-    console.log(pepito);
+    console.log(pepito);//ACA IMPRIMO EL JASON EN LA CONSOLA
 
     displayProducts(productosJSON);
 
@@ -72,22 +69,28 @@ document
     let total = 0;
 
     inputs.forEach((input) => {
-      const cantidad = parseInt(input.value) || 0;
+      let cantidad = parseInt(input.value) || 0;
       const index = parseInt(input.getAttribute("data-index"));
+      const max_stock = parseInt(productosJSON[index].stock);
 
-      if (!isNaN(index) && productosJSON[index]) {
-        const producto = productosJSON[index];
-        let precio = parseInt(producto.precio);
-
-        if (producto.categoria == "1") {
-          precio = precio * 0.7;
-        }
-        const subtotal = cantidad * precio;
-        total += subtotal;
+      if(cantidad > max_stock){
+        alert("No hay suficiente stock del producto");
+        cantidad = 0;
       }
+
+      const producto = productosJSON[index];
+      let precio = parseInt(producto.precio);
+
+      if (producto.categoria == "1") {
+        precio = precio * 0.7;
+      }
+      const subtotal = cantidad * precio;
+      total += subtotal;
     });
 
     console.log(total);
     let div_precio = document.querySelector(".valor_total");
     div_precio.innerHTML = `El precio de su comrpa es $ ${total}`;
   });
+
+  
