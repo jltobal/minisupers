@@ -5,7 +5,7 @@
 body {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -14,11 +14,18 @@ button {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(6, 150px);
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
   gap: 10px;
   margin-top: 20px;
+
+}
+
+.claro {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .item {
