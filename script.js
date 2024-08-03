@@ -19,11 +19,13 @@ fetch("./bbdd.txt")
       var precio = productosPorLinea[1];
       var stock = productosPorLinea[2];
       var categoria = productosPorLinea[3];
+      var img = productosPorLinea[4];
       var producto = {
         nombre: nombre,
         precio: precio,
         stock: stock,
         categoria: categoria,
+        img: img,
       };
       productosJSON.push(producto);
     }
@@ -49,6 +51,7 @@ function displayProducts(productosJSON) {
     itemDiv.className = `item col${index + 1}`;
     itemDiv.innerHTML = `
                 <h4>${producto.nombre}</h4>
+                <img src="${producto.img}">
                 <div>
                     <label>Precio: $${producto.precio}</label><br>
                     <input type="number" min="0" max="${producto.stock}" placeholder="0" data-index="${index}">
