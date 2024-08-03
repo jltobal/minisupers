@@ -49,7 +49,7 @@ justify-content: center;
   font-size: 16px;
 }
 
-.valor_total {
+.valor_total, .medios_pago {
   display: flex;
   justify-content: center;
   background-color: green;
@@ -58,4 +58,8 @@ justify-content: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   padding: 1vh;
   width: 100%;
+}
+
+.medios_pago{
+  background-color: white;
 }
