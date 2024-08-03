@@ -103,6 +103,7 @@ document
         <option value="credito">CREDITO</option>
         <option value="echek">ECHEK</option>
         <option value="transferencia">TRANSFERENCIA</option>
+        <option value="efectivo">EFECTIVO</option>
       </select>
       <button type="button" class="btn_continuar">IR A PAGAR</button>
     </form>`;
