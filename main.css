@@ -3,7 +3,8 @@
 }
 
 body {
-    background-color: darkcyan;
+    background-image: url(img/background.jpg);
+    background-attachment: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

@@ -6,6 +6,7 @@ body{
     background-size: 100%;
     background-position: center;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -36,4 +37,9 @@ form{
     flex-direction:column;
     justify-content: center;
     width: 50vh;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
 }
