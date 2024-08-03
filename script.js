@@ -96,4 +96,8 @@ document
     div_precio.innerHTML = `El precio de su comrpa es $ ${total}`;
   });
 
-  
+  //MEDIOS DE PAGO
+  document.querySelector("btn_continuar").addEventListener('click', function(event){
+    event.preventDefault
+    alert("Gracias por comprar en MINISUPERS");
+  })
